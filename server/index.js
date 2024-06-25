@@ -17,9 +17,12 @@ app.use(cookiesParser())
 app.options('*', cors())
 
 
-// app.get("/", (request, response) => {
-//   response.json("Hello");
-// });
+app.use(function(request, response, next) {
+  res.header('Access-Control-Allow-Origin', 'https://spark-chat-frontend.vercel.app/')
+  res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, client-security-token')
+  next()
+})
 
 const PORT = process.env.PORT || 8080
 
