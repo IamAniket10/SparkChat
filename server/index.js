@@ -17,9 +17,9 @@ app.use(cookiesParser())
 app.options('*', cors())
 
 
-app.get("/", (request, response) => {
-  response.json("Hello");
-});
+// app.get("/", (request, response) => {
+//   response.json("Hello");
+// });
 
 const PORT = process.env.PORT || 8080
 
