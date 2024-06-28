@@ -26,10 +26,14 @@ app.use(function(request, response, next) {
 
 const PORT = process.env.PORT || 8080
 
-app.get('/',(request,response)=>{
-    response.json({
-        message : "Server running at " + PORT
-    })
+// app.get('/',(request,response)=>{
+//     response.json({
+//         message : "Server running at " + PORT
+//     })
+// })
+
+app.get('/', (request, response) => {
+    response.send('Hello World!')
 })
 
 
